@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #3fac95 ;
+}
+
+.links{
+    text-decoration: none;
+    color: #3fac95 ;
+
+    &:hover{
+        color: white;
+    }
+}
+
+.active-link{
+    color: #a1ef8c;
+}
+
+// NYMPH GB PALETTE
+// from dark to light
+// #2c2137, #446176,#3fac95,#a1ef8c
