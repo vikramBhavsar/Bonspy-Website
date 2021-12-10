@@ -10,6 +10,7 @@ const routes: Routes = [
   // {path:'/conqueror-space',component:LandingComponent},
   // // {path:'/conqueror-space',component:LandingComponent},
   {path:'open-space',component:TeamsComponent},
+  {path: '', redirectTo: 'conqueror-space', pathMatch: 'full'},
 ];
 
 @NgModule({
