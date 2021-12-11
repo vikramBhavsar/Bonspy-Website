@@ -1,4 +1,7 @@
 
+a, a:visited, a:hover, a:active {
+    color: inherit;
+}
 
 .hero-section{
     display: flex;
@@ -22,15 +25,13 @@
     }
 }
 
-.info-section{
-    padding: 0rem 10rem;
+.info-section,.info-2-section{
     text-align: start;
-    h3{
-        font-weight: bold;
-        font-size: 2rem;
-    }
-
-    p{
-        font-size: 1.5rem;
-    }
+    font-size: 1.5rem;
+    padding: 0rem 10rem;
 }
+
+.info-2-section{
+    margin-top: 5rem;
+}
+

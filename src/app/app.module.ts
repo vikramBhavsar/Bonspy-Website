@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TARGComponent } from './targ/targ.component';
+import { ArtiSeedEnhancementComponent } from './arti-seed-enhancement/arti-seed-enhancement.component';
+import { SubstituteEarthComponent } from './substitute-earth/substitute-earth.component';
+import { SunInfoComponent } from './sun-info/sun-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     TeamsComponent,
-    TARGComponent
+    TARGComponent,
+    ArtiSeedEnhancementComponent,
+    SubstituteEarthComponent,
+    SunInfoComponent
   ],
   imports: [
     BrowserModule,
