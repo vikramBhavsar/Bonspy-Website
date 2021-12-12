@@ -1,7 +1,32 @@
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+}
+
+
 main{
 
     img{
-        height: 80vh;
+        height: 60vh;
+        width: 100%;
         object-fit: cover;
+    }
+
+    .info-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        h1{
+            padding: 4rem;
+            font-size: 4rem;
+            text-align: end;
+        }
+
+        p{
+            text-align: start;
+            padding: 4rem;
+            font-size: 2rem;
+        }
+
     }
 }

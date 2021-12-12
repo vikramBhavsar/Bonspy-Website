@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AMCIPlanComponent } from './amci-plan/amci-plan.component';
 import { ArtiSeedEnhancementComponent } from './arti-seed-enhancement/arti-seed-enhancement.component';
 
 // adding components
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:'conqueror-space/artificial-seed-enhancement',component: ArtiSeedEnhancementComponent},
   {path:'conqueror-space/agi-4',component: SubstituteEarthComponent},
   {path:'conqueror-space/the-sun',component: SunInfoComponent},
+  {path:'conqueror-space/AMCI-Plan',component: AMCIPlanComponent},
   {path: '', redirectTo: 'conqueror-space', pathMatch: 'full'},
 ];
 

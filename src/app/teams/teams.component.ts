@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-teams',
@@ -7,9 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamsComponent implements OnInit {
 
-  constructor() { }
+  team_74:boolean = false;
+
+  // accessing that modal from the html side.
+  @ViewChild('modal_1') modal_1!: ElementRef;
+
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
+  }
+
+
+  ngAfterViewInit() {
+    //  here the ElementRef are ready. 
+  }
+
+
+
+  modalOpen(modal_no:number){
+    if(modal_no == 1){
+      this.renderer.setStyle(this.modal_1.nativeElement,'display','block');
+    }
+  }
+
+  modalClose(modal_no:number){
+    if(modal_no==1){
+      this.renderer.setStyle(this.modal_1.nativeElement,'display','none');
+    }
   }
 
 }

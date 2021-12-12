@@ -1,1 +1,50 @@
-<p>teams works!</p>
+
+<main>
+    <div class="main-header">
+        <h2>Active Teams</h2>
+        <p>A list of all the teams currently deployed by CSP.</p>
+    </div>
+    
+    
+
+
+
+    
+    <div class="grid-system">
+    
+        <div class="grid-item">
+            <p>Survey Team #74</p>
+            <button (click)="modalOpen(1)">Team's Logs</button>
+        </div>
+    
+        <div class="grid-item">
+            <p>CSP Robotics Team</p>
+            <button>Team's Logs</button>
+        </div>
+    
+        <div class="grid-item">
+            <p>Survey Team #76</p>
+            <button>Team's Logs</button>
+        </div>
+    
+        <div class="grid-item">
+            <p>BYCI-4 Team</p>
+            <button>Team's Logs</button>
+        </div>
+    </div>
+
+    <div #modal_1 class="modal">
+        <div class="flex-container">
+            <div class="modal-content">
+                <span (click)="modalClose(1)">&times;</span>
+                <h2>Access Denied</h2>
+                <p>This user is not authorized to view this page.</p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+
+
