@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-teams',
@@ -12,16 +13,14 @@ export class TeamsComponent implements OnInit {
   // accessing that modal from the html side.
   @ViewChild('modal_1') modal_1!: ElementRef;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-
   ngAfterViewInit() {
     //  here the ElementRef are ready. 
   }
-
 
 
   modalOpen(modal_no:number){
@@ -34,6 +33,10 @@ export class TeamsComponent implements OnInit {
     if(modal_no==1){
       this.renderer.setStyle(this.modal_1.nativeElement,'display','none');
     }
+  }
+
+  goToResearch(){
+    this.router.navigateByUrl('/conqueror-space/Research');
   }
 
 }

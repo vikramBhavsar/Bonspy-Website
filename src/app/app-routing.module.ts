@@ -9,6 +9,7 @@ import { SubstituteEarthComponent } from './substitute-earth/substitute-earth.co
 import { SunInfoComponent } from './sun-info/sun-info.component';
 import { TARGComponent } from './targ/targ.component';
 import { TeamsComponent } from './teams/teams.component';
+import { ResearchComponent } from './research/research.component';
 
 const routes: Routes = [
   {path:'conqueror-space',component:LandingComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'conqueror-space/agi-4',component: SubstituteEarthComponent},
   {path:'conqueror-space/the-sun',component: SunInfoComponent},
   {path:'conqueror-space/AMCI-Plan',component: AMCIPlanComponent},
+  {path:'conqueror-space/Research',component: ResearchComponent},
   {path: '', redirectTo: 'conqueror-space', pathMatch: 'full'},
 ];
 

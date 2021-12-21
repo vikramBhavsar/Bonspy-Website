@@ -1,0 +1,34 @@
+button{
+    border: none;
+    background: none;
+}
+
+.research-carousel{
+    display: grid;
+    grid:
+    'leftBtn research research research research rightBtn'
+    'directBtn directBtn directBtn directBtn directBtn directBtn';
+
+
+    &__leftBtn{
+        grid-area: leftBtn ;
+        color: white;
+        font-size: 3rem;
+        font-weight: lighter;
+    }
+
+
+
+
+    &__rightBtn{
+        grid-area: rightBtn ;
+        font-size: 3rem;
+    }
+
+
+    &__direct-buttons{
+        grid-area: directBtn;
+    }
+
+
+}

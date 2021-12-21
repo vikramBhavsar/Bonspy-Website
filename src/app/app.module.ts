@@ -10,6 +10,7 @@ import { ArtiSeedEnhancementComponent } from './arti-seed-enhancement/arti-seed-
 import { SubstituteEarthComponent } from './substitute-earth/substitute-earth.component';
 import { SunInfoComponent } from './sun-info/sun-info.component';
 import { AMCIPlanComponent } from './amci-plan/amci-plan.component';
+import { ResearchComponent } from './research/research.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AMCIPlanComponent } from './amci-plan/amci-plan.component';
     ArtiSeedEnhancementComponent,
     SubstituteEarthComponent,
     SunInfoComponent,
-    AMCIPlanComponent
+    AMCIPlanComponent,
+    ResearchComponent
   ],
   imports: [
     BrowserModule,
