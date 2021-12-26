@@ -3,6 +3,28 @@ button{
     background: none;
 }
 
+.underline{
+    text-decoration: underline;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    h1{
+        font-size: 6rem;
+    }
+
+    .main-desc{
+        text-align: center;
+        margin: 2rem 4rem;
+        font-size: 1.5rem;
+        font-weight: lighter;
+    }
+}
+
 .research-carousel{
     
     display: grid;
@@ -10,8 +32,11 @@ button{
     'leftBtn research research research research rightBtn'
     'directBtn directBtn directBtn directBtn directBtn directBtn';
 
-
     margin-top: 4rem;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
 
     &__research{
         grid-area: research ;
@@ -22,7 +47,7 @@ button{
 
 
         &__OC{
-            width: 60rem;
+            width: 70rem;
             height: 100%;
             overflow: hidden;
 
@@ -31,22 +56,28 @@ button{
                 flex-direction: row;
 
                 // have to set this below width using javascript since its supposed to be dynamic
-                width: 360rem; 
+                // width: 360rem; 
                 transition: transform 1s ease-in-out;
 
                 &-container__item{
-                    width: 60rem;
+                    width: 70rem;
+                    text-align: start;
+
+                    h3{
+                        font-size: 3rem;
+                    }
+
+                    p{
+                        text-align: start;
+                        font-size: 1.5rem;
+                        font-weight: lighter;
+                        margin-top: 4rem;
+                    }
                 }
 
-
-                &:hover{
-                    transform: translateX(-60rem);
-                }
             }
         }
     }
-
-
 
 
     // Styling the buttons on both sides
@@ -87,7 +118,7 @@ button{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 2rem;
+        margin-top: 0.1rem;
         grid-area: directBtn;
 
         &__btn-item{
@@ -100,11 +131,13 @@ button{
 // decorating the buttons
 .btn-round{
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: #a1ef8c;
-    margin: 0.5rem 1rem;
+    margin: 0rem 1rem;
+    border: 3px transparent solid;
+
     transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
     
     &:hover{
@@ -114,7 +147,7 @@ button{
 
     &-active{
         background-color: transparent; 
-        border: 4px #a1ef8c solid;
+        border: 3px #a1ef8c solid;
     }
 
 }

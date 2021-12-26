@@ -22,6 +22,7 @@ export class ResearchComponent implements OnInit {
   // presentation variables
   curResearch!:number;
   totalResearch!:number;
+  eachItemSize!:number;
 
   constructor(private renderer: Renderer2) { }
 
@@ -31,13 +32,16 @@ export class ResearchComponent implements OnInit {
     this.curResearch = 0;
     //setting the number of child research has
     this.totalResearch = 6 ;
+    // setting the size of each item inside carousel
+    this.eachItemSize = 70;
+
     
   }
   
   
   ngAfterViewInit(){
     // set initial width for class 'research-carousel__research__OC__container'
-    this.renderer.setStyle(this.researchCarousel.nativeElement,"width","360rem");
+    this.renderer.setStyle(this.researchCarousel.nativeElement,"width",`${this.totalResearch * this.eachItemSize}rem`);
 
   }
 
@@ -52,7 +56,7 @@ export class ResearchComponent implements OnInit {
     }
 
     // moving the carousel
-    this.renderer.setStyle(this.researchCarousel.nativeElement,"transform",`translateX(-${this.curResearch * 60}rem)`);
+    this.renderer.setStyle(this.researchCarousel.nativeElement,"transform",`translateX(-${this.curResearch * this.eachItemSize}rem)`);
 
   }
 
@@ -65,7 +69,7 @@ export class ResearchComponent implements OnInit {
     }
 
     // moving the carousel
-    this.renderer.setStyle(this.researchCarousel.nativeElement,"transform",`translateX(-${this.curResearch * 60}rem)`);
+    this.renderer.setStyle(this.researchCarousel.nativeElement,"transform",`translateX(-${this.curResearch * this.eachItemSize}rem)`);
 
   }
 
@@ -75,7 +79,7 @@ export class ResearchComponent implements OnInit {
 
   directNavigate(idx:number){
     this.curResearch = idx;
-    this.renderer.setStyle(this.researchCarousel.nativeElement,"transform",`translateX(-${this.curResearch * 60}rem)`);
+    this.renderer.setStyle(this.researchCarousel.nativeElement,"transform",`translateX(-${this.curResearch * this.eachItemSize}rem)`);
   }
 
 
