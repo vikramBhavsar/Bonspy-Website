@@ -13,21 +13,58 @@ button{
 
     margin-top: 4rem;
 
+    &__research{
+        grid-area: research ;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
 
+
+        &__OC{
+            width: 60rem;
+            height: 100%;
+            overflow: hidden;
+
+            &__container{
+                display: flex;
+                flex-direction: row;
+
+                // have to set this below width using javascript since its supposed to be dynamic
+                width: 360rem; 
+                transition: transform 1s ease-in-out;
+
+                &-container__item{
+                    width: 60rem;
+                }
+
+
+                &:hover{
+                    transform: translateX(-60rem);
+                }
+            }
+        }
+    }
+
+
+
+
+    // Styling the buttons on both sides
     &__leftBtn{
         grid-area: leftBtn ;
         color: #a1ef8c;
         font-size: 3rem;
         font-weight: lighter;
 
-    
         margin-left: 1rem;
         margin-right: 4rem;
 
+        &:hover{
+            cursor: pointer;
+            opacity: 0.8;
+
+        }
     }
-
-
-
 
     &__rightBtn{
         grid-area: rightBtn ;
@@ -38,12 +75,18 @@ button{
         
         margin-left: 4rem;
         margin-right: 1rem;
+
+        &:hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
     }
 
 
     &__direct-buttons{
         grid-area: directBtn;
     }
+    
 
 
 }
