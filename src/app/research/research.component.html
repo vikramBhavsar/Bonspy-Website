@@ -58,7 +58,11 @@
         </button>
 
         <div class="research-carousel__direct-buttons">
-            <p>PLACE HOLDER FOR NOW (DESIGN INCOMPELTE)</p>
+
+            <button *ngFor="let idx of createRange( ); let index = index" class="research-carousel__direct-buttons__btn-item" (click)="directNavigate(index)">
+                <div [ngClass]="index == curResearch ? 'btn-round btn-round-active': 'btn-round' ">
+                </div>
+            </button>
         </div>
 
     </div>

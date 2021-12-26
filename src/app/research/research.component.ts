@@ -29,6 +29,8 @@ export class ResearchComponent implements OnInit {
 
     // setting values for all the variables
     this.curResearch = 0;
+    //setting the number of child research has
+    this.totalResearch = 6 ;
     
   }
   
@@ -37,8 +39,6 @@ export class ResearchComponent implements OnInit {
     // set initial width for class 'research-carousel__research__OC__container'
     this.renderer.setStyle(this.researchCarousel.nativeElement,"width","360rem");
 
-    //setting the number of child research has
-    this.totalResearch = this.researchCarousel.nativeElement.childElementCount;
   }
 
 
@@ -67,6 +67,15 @@ export class ResearchComponent implements OnInit {
     // moving the carousel
     this.renderer.setStyle(this.researchCarousel.nativeElement,"transform",`translateX(-${this.curResearch * 60}rem)`);
 
+  }
+
+  createRange(){
+    return new Array(this.totalResearch);
+  }
+
+  directNavigate(idx:number){
+    this.curResearch = idx;
+    this.renderer.setStyle(this.researchCarousel.nativeElement,"transform",`translateX(-${this.curResearch * 60}rem)`);
   }
 
 

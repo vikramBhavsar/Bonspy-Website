@@ -84,9 +84,38 @@ button{
 
 
     &__direct-buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
         grid-area: directBtn;
-    }
-    
 
+        &__btn-item{
+        color: #a1ef8c;
+        }
+    }
+}
+
+
+// decorating the buttons
+.btn-round{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #a1ef8c;
+    margin: 0.5rem 1rem;
+    transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    
+    &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    &-active{
+        background-color: transparent; 
+        border: 4px #a1ef8c solid;
+    }
 
 }
+
