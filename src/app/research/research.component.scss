@@ -4,17 +4,26 @@ button{
 }
 
 .research-carousel{
+    
     display: grid;
     grid:
     'leftBtn research research research research rightBtn'
     'directBtn directBtn directBtn directBtn directBtn directBtn';
 
 
+    margin-top: 4rem;
+
+
     &__leftBtn{
         grid-area: leftBtn ;
-        color: white;
+        color: #a1ef8c;
         font-size: 3rem;
         font-weight: lighter;
+
+    
+        margin-left: 1rem;
+        margin-right: 4rem;
+
     }
 
 
@@ -22,7 +31,13 @@ button{
 
     &__rightBtn{
         grid-area: rightBtn ;
+        color: #a1ef8c;
         font-size: 3rem;
+        font-weight: lighter;
+        
+        
+        margin-left: 4rem;
+        margin-right: 1rem;
     }
 
 

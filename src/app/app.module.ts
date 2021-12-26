@@ -11,6 +11,7 @@ import { SubstituteEarthComponent } from './substitute-earth/substitute-earth.co
 import { SunInfoComponent } from './sun-info/sun-info.component';
 import { AMCIPlanComponent } from './amci-plan/amci-plan.component';
 import { ResearchComponent } from './research/research.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ResearchComponent } from './research/research.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
